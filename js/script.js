@@ -1,19 +1,9 @@
-// break 
+// String and array iteration
+let name = "I am learning Javascript!";
+let food = ["Cake", "Chocolate", "Ice Cream"];
+let len = food.length;
 
-for(var i=1; i<=5; i++ ) {
-    if ( i == 3) {
-        break;
-    }
-    document.write(i);
-}
-
-
-
-// continue
-
-for (var i =1; i <= 10; i++){
-    if(i % 2 == 1) {
-        continue;
-    }
-    document.write(i);
+for(var i = 0; i < len; i++) {
+    document.writeln(`Index : ${i}`);
+    document.writeln(food[i]); 
 }
