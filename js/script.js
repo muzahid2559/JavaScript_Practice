@@ -1,36 +1,70 @@
-// Strings(Data Type)
-document.writeln("Hello World!");
-document.writeln("Hello  \' World!");
-document.writeln("Hello \\ World!");
-let a = "Hello \t World!";
-document.writeln(a);
-document.writeln("Hello \n World!");
+// Arrays(Data Types)
+
+//Collection of items
+var countries = ["Bangladesh", "USA", "UK"]
+document.writeln(countries);
+document.writeln(countries[0]);
+document.writeln(countries[1]);
+
+var country = countries[0]
 
 
-//length property
-let z = "Hello World!";
-document.writeln(z.length);
+//Mutable
+countries[0] = "Poland"
+document.writeln(countries);
+document.writeln(countries.length);
 
-//Uppercase() and Lowercase() method
-var b = "Hello World!";
-document.writeln(b.toUpperCase());
+//Push and Pop
+countries.push("China"); // return length
+document.writeln(countries);
 
-var c = "Hello World!";
-document.writeln(c.toLowerCase());
+countries.pop(); // returns length
+document.writeln(countries);
 
-document.writeln(c[6]);
+countries.push("Japan", "Srilanka");
+document.writeln(countries);
 
-//slice = that means kata
-var y = c.slice(2, 10);
+countries.shift() //returns the shifted
+document.writeln(countries);
+
+countries.unshift("Germany") // returns length
+document.writeln(countries);
+
+
+//Empty array
+var numbers;
+numbers = []
+document.writeln(numbers);
+
+numbers.push(1)
+document.writeln(numbers);
+numbers.push(78)
+document.writeln(numbers);
+numbers.push("One")
+document.writeln(numbers);
+
+
+x = "Bangladesh"
+var y = x.split("")
+document.writeln(y);
+x = "Bangladesh is a country"
+y = x.split("")
+document.writeln(y);
+y = x.split("n")
+document.writeln(y);
+z = x.split(" ")
+document.writeln(z);
+x = "Bangladesh, China, Finland"
+y = x.split(",")
 document.writeln(y);
 
-var p =  c.slice(-8, -2);
-document.writeln(p);
+z.toString()
+document.writeln(z);
+z.join("/")
+document.writeln(z);
 
-//substr()
-var p =  c.substr(8, 4);
-document.writeln(p);
+countries.sort()
+document.writeln(countries);
 
-//replace
-var p =  c.replace("ll","MM");
-document.writeln(p);
+countries.reverse()
+document.writeln(countries);
