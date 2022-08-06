@@ -1,27 +1,36 @@
-// Number(Data Type)
-var a = 3.156;
-var b = 123e5;
+// Strings(Data Type)
+document.writeln("Hello World!");
+document.writeln("Hello  \' World!");
+document.writeln("Hello \\ World!");
+let a = "Hello \t World!";
 document.writeln(a);
-document.writeln(b);
+document.writeln("Hello \n World!");
 
-//convert decemal to binary 
-var c = 150;
-document.writeln(c.toString(2)); 
 
-//dosomiker por koto ghor dekhte cai
-var x = 7.5689;
-document.writeln(x.toPrecision(3));
+//length property
+let z = "Hello World!";
+document.writeln(z.length);
 
-//string to int
-var y = "15.68";
-document.writeln(parseInt(y));
+//Uppercase() and Lowercase() method
+var b = "Hello World!";
+document.writeln(b.toUpperCase());
 
-//string to float
-var z = "15.68";
-document.writeln(parseFloat(z));
+var c = "Hello World!";
+document.writeln(c.toLowerCase());
 
-var h = "gjjhjh";
-document.writeln(isNaN(h));
+document.writeln(c[6]);
 
-var j = 5.68;
-document.writeln(isNaN(j));
+//slice = that means kata
+var y = c.slice(2, 10);
+document.writeln(y);
+
+var p =  c.slice(-8, -2);
+document.writeln(p);
+
+//substr()
+var p =  c.substr(8, 4);
+document.writeln(p);
+
+//replace
+var p =  c.replace("ll","MM");
+document.writeln(p);
