@@ -1,17 +1,11 @@
-// Primitive Types  deals with value and work at number, string, boolean
-//difference address
-let a = 7;
-let b = a;
+// Template Literals(ES6)
+let a = `First Line
+           Second Line`; // ` = backtick
+document.writeln(a);
 
-a = 45;
-document.writeln(b);
+let age = 36;
+document.writeln(`His age is ${age}`);
 
-
-// Reference Types  deals with address and work at array,object
-//same address
-let numbers = [1,2,3];
-let newNumbers = numbers;
-document.writeln(newNumbers);
-numbers[1] = 500;
-document.writeln(numbers);
-document.writeln(newNumbers);
+let x = 40;
+let y = 56;
+document.writeln(`${x} + ${y} = ${x+y}`);
