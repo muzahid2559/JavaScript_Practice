@@ -1,42 +1,16 @@
-// For-in string/array/object
-// For-of string/array
-let name = "I am learning Javascript!";
-let food = ["Cake", "Chocolate", "Ice Cream"];
+//Exercise 03
+//Sum of the series of square numbers
 
-//object doesn't have index
-let person = {
-    name: "Shakib Al Hasan",
-    profession: "Cricketer",
-    team: "Bangladesh",
-    age: 33,
+var n = parseInt(prompt("Enter the number of terms: "));
+var sum = 0;
+var series = "";
+
+for (var i = 1; i <= n; i++) {
+    sum += i ** 2;
+    series += (i ** 2).toString();
+    series += " + ";
+    if (i == n) { continue; }
+    
 }
 
-// We will get index
- for( var x in name ) {
-    document.writeln(`index ${x} and item ${ name[x] }` );
-} 
-
-
-// We will get items/values
-for(var x of name ) {
-    document.writeln(x);
-}
-
-// We will get indexes
-for (var y in food) {
-    document.writeln(`Index: ${y}; and item: ${food[y]}`);
-}
-
-// We will get items
-for (var y of food) {
-    document.writeln(y);
-}
-
-
-// For-in with objects
-for (var x in person) {
-    document.writeln(`Property: ${x}
-    Value: ${person[x] }`);
-}
-
-// For-of won't work for objects
+document.write(`${series} = ${sum}`);
