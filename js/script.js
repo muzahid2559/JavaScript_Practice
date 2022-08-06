@@ -1,34 +1,34 @@
-//Operator  =  +, -, *, / 
-// Operand Operator Operand 
-// a++; a=a+1;
+// String Operator
+var line1 = "Hello ";
+var line2 = "World! ";
+document.write(line1 + line2);
 
-document.write(3+3);
-document.write(9-8);
-document.write(5*6);
-document.write(8/4);
-document.write(19%2);
-document.write(2**3);
+var line3 = 40;
+var line4 = "World! ";
+document.write(line3 + line4);
 
 
-// Increment 
-var a = 5;
-var b = 7;
-a++;
-b++;
-document.write(a);
-document.write(b);
+var line5 = "Hello";
+var line6 = 40;
+var line7 = 5;
+document.writeln(line5 + line6 + line7);
 
 
-var E , F;
-var c = 6;
-var d = 8;
-E = c++;
-F = ++d;
-document.write(E);
-document.write(c);
-document.write(F);
+var line6 = 40;
+var line7 = 5;
+var line8 = "Hello ";
+document.write(line6 + line7 + line8);
 
+var line9 = "40";
+var line10 = "5";
+document.writeln(line9 - line10);
 
+var line11 = "40";
+var line12= "5";
+document.writeln(line11 + line12); //batikrom
 
+var line9 = "40";
+var line10 = "Muzahid";
+document.writeln(line9 - line10);
 
 
