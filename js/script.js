@@ -1,70 +1,14 @@
-// Arrays(Data Types)
+// Objects(Data Types)
+student = {name:"Rahim", age:25, hometown:"Dhaka"}
 
-//Collection of items
-var countries = ["Bangladesh", "USA", "UK"]
-document.writeln(countries);
-document.writeln(countries[0]);
-document.writeln(countries[1]);
-
-var country = countries[0]
+document.writeln(student["name"]);
+document.writeln(student.age);
 
 
-//Mutable
-countries[0] = "Poland"
-document.writeln(countries);
-document.writeln(countries.length);
 
-//Push and Pop
-countries.push("China"); // return length
-document.writeln(countries);
+student["occu"] = "Student"
+document.writeln(student.occu);
 
-countries.pop(); // returns length
-document.writeln(countries);
+delete student.occu
+document.writeln(student);
 
-countries.push("Japan", "Srilanka");
-document.writeln(countries);
-
-countries.shift() //returns the shifted
-document.writeln(countries);
-
-countries.unshift("Germany") // returns length
-document.writeln(countries);
-
-
-//Empty array
-var numbers;
-numbers = []
-document.writeln(numbers);
-
-numbers.push(1)
-document.writeln(numbers);
-numbers.push(78)
-document.writeln(numbers);
-numbers.push("One")
-document.writeln(numbers);
-
-
-x = "Bangladesh"
-var y = x.split("")
-document.writeln(y);
-x = "Bangladesh is a country"
-y = x.split("")
-document.writeln(y);
-y = x.split("n")
-document.writeln(y);
-z = x.split(" ")
-document.writeln(z);
-x = "Bangladesh, China, Finland"
-y = x.split(",")
-document.writeln(y);
-
-z.toString()
-document.writeln(z);
-z.join("/")
-document.writeln(z);
-
-countries.sort()
-document.writeln(countries);
-
-countries.reverse()
-document.writeln(countries);
