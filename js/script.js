@@ -1,21 +1,44 @@
-// Static Function
+let val;
+val = this;
+val = window;
+val = window.document;
+val = document;
+val = document.all;
+val = document.all[2];
+val = document.all.length;
+val = document.head;
+val = document.body;
+val = document.doctype;
+val = document.domain;
+val = document.URL;
+val = document.characterSet;
+val = document.contentType;
 
-class Person {
-    constructor(fname, lname) {
-        this.firstname = fname;
-        this.lastname = lname;
-    }
+val = document.forms;
+val = document.forms[0];
+val = document.forms[0].method;
+val = document.forms[0].action;
 
-    greeting() {
-        return `Hello ${this.firstname} ${this.lastname}!`;
-    }
+val = document.links;
+val = document.links[0];
+val = document.links[0].href;
+val = document.links[0].className;
+val = document.links[0].classList;
 
-    static test() {
-        document.writeln("I am staic!");
-    }
-}
+val = document.images;
 
-let person1 = new Person("Muzahidul", "Islam");
+val = document.scripts;
+val = document.scripts[0];
+val = document.scripts[0].src;
+val = document.scripts[0].getAttribute('src');
 
-document.writeln(person1.greeting());
-document.writeln(Person.test());
+links = document.links;
+
+
+let linkArr = Array.from(links);
+linkArr.forEach(function(link){
+    document.writeln(link.getAttribute('href'));
+});
+
+document.writeln(links);
+document.writeln(val);
