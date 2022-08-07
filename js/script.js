@@ -1,17 +1,21 @@
-// Functions
+// FUnction parameter/argument
 
-/*1.Built in Functions:
-alert();
-console.log();*/
-
-//2.User Defined Functions
-
-//Declaration of function
-function saySomething() {
-    document.write("Hello!");
-    document.write("I am learning Javascript!");
-    document.write("Muzahid");
+function saySomenthing(fname = "Muzahidul", lname = "Islam") {
+    document.writeln(`Hello ${ fname } ${ lname }!`);
 }
+saySomenthing();
 
-//Execution of Function
-saySomething();
+let firstname = "Moshiur";
+let lastname = "Rahman";
+saySomenthing(firstname,lastname);
+
+
+//Return value
+function addNum(a=0, b=0) {
+    document.writeln(`${ a } + ${ b } = ${a+b}`);
+    return a+b;
+}
+let sum = addNum(4,5)
+document.writeln(sum);
+let y = addNum(3.6, 2.3);
+document.writeln(y);
