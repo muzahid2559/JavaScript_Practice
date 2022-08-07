@@ -1,21 +1,34 @@
-// Normal Declaration
-function saySomething(name) {
-    console.log('Hello ' + name);
+// Array iteration using forEach
+
+var foods = ["Cake", "Ice Cream", "Chocolates", "Bread"];
+var numbers = [1, 32, 31, 2];
+let printEverything = function(item, i, abc){
+    document.write(`Index : ${i} and Item ${item}`);
+    document.write(abc);
 }
 
-// Function Expression
+foods.forEach(printEverything);
+// 1st Parameter : Item
+// 2nd Parameter : Index
+// 3rd Parameter : Whole Array
 
-let saySomething1 = function(name2) {
-    console.log('Hello ' + name2);
+
+
+
+// Array iteration using Mapping
+
+var foods = ["Cake", "Ice Cream", "Chocolates", "Bread"];
+var numbers = [1, 32, 31, 2];
+
+
+function addSomething(item) {
+    return `${item} is a Food`;
 }
 
-// Arrow Function (ES6)
+let arr_res = foods.map(addSomething);
+let arr_square = numbers.map(function(item){
+    return item*item;
+})
 
-let saySomething2 = (name3) => {
-    console.log("I am " + name3);
-}
-
-
-saySomething("Khandakar");
-saySomething1("Muzahidul Islam");
-saySomething2("JavaScript");
+document.write(arr_res);
+document.write(arr_square);
