@@ -1,34 +1,18 @@
-// Array iteration using forEach
+// Object Method
+let person = {
+    firstname: "Fazle",
+    lastname: "Rahat",
+    dob: "9-10-1995", //number, string, date, array, object
 
-var foods = ["Cake", "Ice Cream", "Chocolates", "Bread"];
-var numbers = [1, 32, 31, 2];
-let printEverything = function(item, i, abc){
-    document.write(`Index : ${i} and Item ${item}`);
-    document.write(abc);
+    fullname: function() { //Method
+        return `${this.firstname} ${this.lastname}`;
+    }
+
 }
 
-foods.forEach(printEverything);
-// 1st Parameter : Item
-// 2nd Parameter : Index
-// 3rd Parameter : Whole Array
+document.writeln(person.firstname);
+document.writeln(person.fullname());
 
-
-
-
-// Array iteration using Mapping
-
-var foods = ["Cake", "Ice Cream", "Chocolates", "Bread"];
-var numbers = [1, 32, 31, 2];
-
-
-function addSomething(item) {
-    return `${item} is a Food`;
-}
-
-let arr_res = foods.map(addSomething);
-let arr_square = numbers.map(function(item){
-    return item*item;
-})
-
-document.write(arr_res);
-document.write(arr_square);
+let str = "Muzahidul Islam";
+document.writeln(str.length);
+document.writeln(str.split());
