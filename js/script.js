@@ -1,43 +1,52 @@
-// Multiselector 
-// document.getElementsByClassName()
-let list = document.getElementsByClassName('sample-class');
-list[0].style.background = 'red';
-list[0].style.color = 'white';
-list[0].style.padding = '10px';
-list[0].textContent = 'Hello World!';
-document.writeln(list[0]);
+// Traversing the DOM
+let val;
+let list = document.querySelector('ul');
+let listItem = document.querySelector('ul li:first-child');
 
-// document.getElementsByTagName()
-list = document.getElementsByTagName('li');
-list = document.querySelector('ol').getElementsByTagName('li');
+val = list;
+val = listItem;
 
-let lis = Array.from(list);
-lis.forEach(function(item){
-    document.writeln(item);
-});
+// Get Child Nodes
+val = list;
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[1];
+val = list.childNodes[2];
+val = list.childNodes[1].nodeName;
+val = list.childNodes[0].nodeType;
 
-// document.querySelectorAll()
-// id -> #
-// classname -> .
-// tagname -> nothing
+// 1 Element
+// 2 Attribute
+// 3 Text Node
+// 8 Comment
+// 9 Document Itself
+// 10 Doctype
+val = list.childNodes;
 
-list = document.querySelectorAll('ol li');
-list.forEach(function(item){
-    document.writeln(item);
-});
+val = list.children;
+val = list.children[1];
+list.children[0].textContent = "Hello";
+val = list.children[1].children[0];
+val = list.children[1].children[0].href;
 
-let liOdd = document.querySelectorAll('li:nth-child(odd)');
-let liEve = document.querySelectorAll('li:nth-child(even)');
+val = list.firstChild;
+val = list.firstElementChild;
+val = list.lastChild;
+val = list.lastElementChild;
 
-liOdd.forEach(function(item){
-    item.style.background = 'grey';
-    item.style.color = 'white';
-});
+val = list.childElementCount;
 
-liEve.forEach(function(item){
-    item.style.background = 'red';
-    item.style.color = 'white';
-});
+val = listItem;
+val = listItem.parentElement;
+val = listItem.parentNode;
+val = listItem.parentElement.parentElement;
 
+val = listItem.nextSibling.nextSibling;
+val = listItem.nextElementSibling;
+val = listItem.nextElementSibling.nextElementSibling;
 
-document.writeln(list);
+val = document.querySelector('ul li:last-child');
+val = val.previousSibling;
+val = val.previousElementSibling;
+
+console.log(val);
