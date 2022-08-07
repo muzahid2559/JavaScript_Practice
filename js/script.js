@@ -1,44 +1,43 @@
-let val;
-val = this;
-val = window;
-val = window.document;
-val = document;
-val = document.all;
-val = document.all[2];
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+// Multiselector 
+// document.getElementsByClassName()
+let list = document.getElementsByClassName('sample-class');
+list[0].style.background = 'red';
+list[0].style.color = 'white';
+list[0].style.padding = '10px';
+list[0].textContent = 'Hello World!';
+document.writeln(list[0]);
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].method;
-val = document.forms[0].action;
+// document.getElementsByTagName()
+list = document.getElementsByTagName('li');
+list = document.querySelector('ol').getElementsByTagName('li');
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].href;
-val = document.links[0].className;
-val = document.links[0].classList;
-
-val = document.images;
-
-val = document.scripts;
-val = document.scripts[0];
-val = document.scripts[0].src;
-val = document.scripts[0].getAttribute('src');
-
-links = document.links;
-
-
-let linkArr = Array.from(links);
-linkArr.forEach(function(link){
-    document.writeln(link.getAttribute('href'));
+let lis = Array.from(list);
+lis.forEach(function(item){
+    document.writeln(item);
 });
 
-document.writeln(links);
-document.writeln(val);
+// document.querySelectorAll()
+// id -> #
+// classname -> .
+// tagname -> nothing
+
+list = document.querySelectorAll('ol li');
+list.forEach(function(item){
+    document.writeln(item);
+});
+
+let liOdd = document.querySelectorAll('li:nth-child(odd)');
+let liEve = document.querySelectorAll('li:nth-child(even)');
+
+liOdd.forEach(function(item){
+    item.style.background = 'grey';
+    item.style.color = 'white';
+});
+
+liEve.forEach(function(item){
+    item.style.background = 'red';
+    item.style.color = 'white';
+});
+
+
+document.writeln(list);
