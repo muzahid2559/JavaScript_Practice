@@ -1,21 +1,21 @@
-// FUnction parameter/argument
-
-function saySomenthing(fname = "Muzahidul", lname = "Islam") {
-    document.writeln(`Hello ${ fname } ${ lname }!`);
+// Normal Declaration
+function saySomething(name) {
+    console.log('Hello ' + name);
 }
-saySomenthing();
 
-let firstname = "Moshiur";
-let lastname = "Rahman";
-saySomenthing(firstname,lastname);
+// Function Expression
 
-
-//Return value
-function addNum(a=0, b=0) {
-    document.writeln(`${ a } + ${ b } = ${a+b}`);
-    return a+b;
+let saySomething1 = function(name2) {
+    console.log('Hello ' + name2);
 }
-let sum = addNum(4,5)
-document.writeln(sum);
-let y = addNum(3.6, 2.3);
-document.writeln(y);
+
+// Arrow Function (ES6)
+
+let saySomething2 = (name3) => {
+    console.log("I am " + name3);
+}
+
+
+saySomething("Khandakar");
+saySomething1("Muzahidul Islam");
+saySomething2("JavaScript");
