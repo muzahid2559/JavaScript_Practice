@@ -1,34 +1,35 @@
-// Global Scope
-var a = 1;
-let b = 2;
-const c = 3;
+// Class(ES6) 
+// Class is a template for creating objects
 
-document.writeln(`Global Scope: `, a, b, c);
+class Person {
+    constructor(fname, lname, birthday) {
+        this.firstname = fname;
+        this.lastname = lname;
+        this.dob = birthday;
+    }
 
-function test() {
-    var a = 4;
-    let b = 5;
-    const c = 6;
-    document.writeln(`Functions or Local Scope: `, a, b ,c);
-}
-test();
-document.writeln(`Global Scope: `, a, b, c);
+    calculateAge() {
+        let birthday = new Date(this.dob);
+        let diff = Date.now() - birthday.getTime();
+        let ageDate = new Date(diff);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
 
+    fullname() {
+        document.writeln(this.firstname, this.lastname);
+    }
 
-
-
-if (true) {
-    var a = 7;
-    let b = 8;
-    const c = 9;
-    document.writeln(`If Scope: ` , a, b, c);
 }
 
-document.writeln(`Global Scope: `, a, b, c);
+let person1 = new Person("Fazle", "Rahat", "11-13-1988"); 
+let person2 = new Person("Moinul", "Islam", "02-11-1991");
+let person3 = new Person("Rony", "Chy", "01-17-1996");
+
+document.writeln(person1.calculateAge());
+document.writeln(person2.calculateAge());
+document.writeln(person3.calculateAge());
 
 
-for (let a = 0; a <10; a ++) {
-    document.writeln(`Loop: `, a);
-}
-
-document.writeln(`Global Scope: `, a, b, c);
+document.writeln(person1.fullname());
+document.writeln(person2.fullname());
+document.writeln(person3.fullname());
