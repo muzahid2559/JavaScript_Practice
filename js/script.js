@@ -1,43 +1,55 @@
-// Regular Expression
-// Pattern Matching Technique
 let re;
 let str;
-
+// Literal Character
 re = /hello/;
-re = /Hello/;
-re = /hello/i; // i = case insensitive
+re = /hello/i;
+re = /hell/i;
+re = /lo W/i;
+re = /loW/i;
 
-console.log(re); //output: /hello/
-console.log(re.source); //output: hello
+// Meta Characters
+re = /^hello/; // Must start with   (^ = keret sebble)
+re = /hello$/; // Must end with
+re = /world$/;
+re = /^hello$/; // Must start and end with
+re = /^h.llo$/; // Matches any one character (. ar akhane je kono akta character thakei hbe)
+re = /h.llo/;              
+re = /h*llo/; // 0 or more times (* ar akhane je kono  character thakeo hbe,na thakleo hbe)
+re = /he?a?llo/; // Optional (? ar age ja thakbe sudu seta thakteo pare abar nao pare but oikhane onno kichu thakte pabe na)
+re = /hello\?/; // escaping  (qustion mark tao akta character. so, hello? thaklei macth korbe)  
 
-str = "HelLo World";
-str = "Again Hello World";
-str = "Hell World";
-str = "sdsHellosds World";
-str = "Again Hello World Hello";
-str = "World";
+str = "Again hello World";
+str = "hello hello";
+str = "hello";
+str = "hallo";
+str = "hillo";
+str = "h llo";
+str = "hllo";
+str = "hillo worlde";
+str = "hello worlde";
+str = "hillo";
+str = "hilo";
+str = "hhfsdhfsuillo";
+str = "hello";
+str = "hllo";
+str = "hallo";
+str = "htllo";
+str = "heallo";
+str = "hello";
+str = "hallo";
+str = "hllo";
+str = "hello";
+str = "hello?";
 
-// exec() - Returns result in an array or null
-let result = re.exec(str);
 
-// test() - true/false
-result = re.test(str);
+console.log(re.exec(str));
+reTest(re, str);
 
-// match() - Returns array or null
-str = "Again Hello World Hello";
-
-result = str.match(re);
-
-// search() - Returns index of the first match or -1
-str = "World";
-
-result = str.search(re);
-
-// replace() - Return new string
-str = "Again Hello World Hello";
-let newstr = str.replace(re, "Hi");
-
-console.log(result);
-console.log(str);
-console.log(re.source);
-console.log(newstr);
+function reTest(re, str) {
+    if(re.test(str)) {
+        console.log(`'${str}' matches '${re.source}'`);
+    }
+    else {
+        console.log(`'${str}' doesn't match '${re.source}'`);
+    }
+}
