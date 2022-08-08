@@ -1,46 +1,26 @@
-//Events of JavaScript
+console.log("Before Error!");
 
-// Event Listener
-
-document.querySelector(".container").addEventListener('mousemove', message);
-
-document.querySelector('.container').style.background = "red";
-
-function message(e) {
-    let val = e;
-    val = e.target; // this
-    val = e.target.id;
-
-    val = e.timeStamp;
-    val = e.type;
-
-    val = e.clientY;
-    val = e.clientX;
-
-    val = e.offsetY;
-    val = e.offsetX;
-    val = this;
-
-    this.style.background = `#${e.offsetX}`;
-
-    console.log(e.offsetX);
-    console.log(e.offsetY);
-    console.log(val);
-
+try {
+    test();
+    //undefined.test();
+} catch(err) {
+    //console.log(err);
+    console.log(err.message);
+    console.log(err.name);
+} finally {
+    console.log("I am inside finally!");
 }
 
+console.log("After Error!");
 
-// Event Listener
 
-document.querySelector("#name").addEventListener('focus', test);
+// Error Handling
 
-document.querySelector("#name").addEventListener('keyup', test2);
+let a = 2;
 
-function test(e) {
-    this.style.background = 'pink';
-}
-
-function test2(e) {
-    //console.log(this.value);
-    document.getElementById("demo").innerText = this.value;
+try {
+    if(a>15) throw "Too Big";
+    else if (a<5) throw "Too small";
+} catch(err) {
+    console.log(err);
 }
